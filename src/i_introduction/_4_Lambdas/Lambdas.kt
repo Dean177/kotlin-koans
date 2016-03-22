@@ -21,7 +21,10 @@ fun todoTask4(collection: Collection<Int>): Nothing = TODO(
     documentation = doc4(),
     references = { JavaCode4().task4(collection) })
 
-fun task4(collection: Collection<Int>): Boolean = todoTask4(collection)
+fun task4(collection: Collection<Int>): Boolean {
+    val divides42: (Int) -> Boolean = { elem -> elem % 42 == 0 }
+    return collection.any(divides42)
+}
 
 
 
