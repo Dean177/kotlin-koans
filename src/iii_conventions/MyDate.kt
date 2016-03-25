@@ -2,11 +2,11 @@ package iii_conventions
 
 data class MyDate(val year: Int, val month: Int, val dayOfMonth: Int): Comparable<MyDate> {
     override fun compareTo(other: MyDate): Int {
-        if (other.year - year != 0) {
+        if (year - other.year != 0) {
             return year - other.year
         }
 
-        if (other.month - month != 0) {
+        if (month - other.month != 0) {
             return month - other.month
         }
 

@@ -34,7 +34,15 @@ fun renderProductTable(): String {
                 }
             }
             val products = getProducts()
-            todoTask39()
+            products.zip(0..products.size).map { prodDex ->
+                val (product, row) = prodDex
+                tr {
+                    td(color = getTitleColor()) { text(product.description) }
+                    td(color = getCellColor(0, row)) { text(product.price) }
+                    td(color = getCellColor(1, row)) { text(product.popularity) }
+
+                }
+            }
         }
     }.toString()
 }

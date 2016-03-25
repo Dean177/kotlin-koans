@@ -1,7 +1,8 @@
-package v_builders.examples
+package v_builders
 
 import org.junit.Assert.assertEquals
 import org.junit.Test
+import v_builders.buildMap
 import java.util.*
 
 class _38_The_Function_Apply {
